@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9dc046bf-894f-434f-9009-2822b460164c}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>ModelingProject</Name>
+    <RootNamespace>ModelingProject</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Content Include="AssemblyDependencies.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContoursMatcher_GetMatch.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContoursMatcher_GetMatch.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ContoursMatcher_GetMatch.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="MainWindow_ProcessFrame.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MainWindow_ProcessFrame.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MainWindow_ProcessFrame.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLActivityDiagram.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLActivityDiagram.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLActivityDiagram.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagram.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\ModelingProject.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+﻿<UserControl xmlns:my="clr-namespace:ContoursControlLibrary"  x:Class="ContoursControlLibrary.ContourInputControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}">             
+    <Grid>
+        <my:ContourPresenterControl Panel.ZIndex="0"
+                x:Name="ContourPresenter" 
+                MouseDown="ContourPresenter_MouseDown" 
+                MouseMove="ContourPresenter_MouseMove" 
+                MouseUp="ContourPresenter_MouseUp"
+                IsHitTestVisible="true"
+                Background="#00FFFFFF"
+                ContourStyle="{Binding Path=RawContourStyle}" />
+        <my:ContourPresenterControl Panel.ZIndex="1"
+                x:Name="SimplifiedContourPresenter"                 
+                IsHitTestVisible="false"
+                ContourStyle="{Binding Path=SimplifiedContourStyle}"
+                 />
+        <!--MarkerStyle="{Binding Path=SimplifiedContourMarkerStyle}"-->
+    </Grid>
+</UserControl>

@@ -1,0 +1,154 @@
+﻿<Window x:Class="OpenCVWithWPFBackEnd.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:OpenCVWithWPFBackEnd"
+        Title="Contour analisis (OpenCV preprocessing)" Height="595" Width="902" Loaded="Window_Loaded"
+        TextOptions.TextFormattingMode="Display"
+        Name="RootWindow" ResizeMode="NoResize">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:Commands.OpenDevice" Executed="OpenDevice_Executed"/>
+        <CommandBinding Command="local:Commands.OpenPicture" Executed="OpenPicture_Executed"/>
+        <CommandBinding Command="local:Commands.LoadFamiliar" Executed="LoadFamiliar_Executed"/>
+        <CommandBinding Command="local:Commands.SetShowMode" Executed="SetShowMode_Executed"/>
+        <CommandBinding Command="local:Commands.GrabContours" Executed="GrabContours_Executed"/>
+        <CommandBinding Command="local:Commands.StopCapture" Executed="StopCapture_Executed"/>
+        <CommandBinding Command="Close" Executed="Close_Executed"/>
+    </Window.CommandBindings>
+    <Window.Resources>
+        <Style x:Key="MenuIconStyle" TargetType="Image">
+            <Setter Property="Height" Value="18"/>
+            <Setter Property="Width" Value="18"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Background="WhiteSmoke">
+            <MenuItem Header="Main" DataContext="{Binding ElementName=RootWindow}">                
+                <MenuItem Header="Data source" Name="DataSourceMenu">
+                    <MenuItem.Icon>
+                        <Image Source="/OpenCVWithWPFBackEnd;component/Images/open.png" Style="{StaticResource MenuIconStyle}" />
+                    </MenuItem.Icon>
+                    <MenuItem Command="local:Commands.OpenDevice">
+                        <MenuItem.Icon>
+                            <Image Source="/OpenCVWithWPFBackEnd;component/Images/webcam.png" Style="{StaticResource MenuIconStyle}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Command="local:Commands.OpenPicture">
+                        <MenuItem.Icon>
+                            <Image Source="/OpenCVWithWPFBackEnd;component/Images/image.png" Style="{StaticResource MenuIconStyle}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Command="local:Commands.StopCapture"/>
+                </MenuItem>
+                <MenuItem Command="local:Commands.GrabContours">
+                    <MenuItem.Icon>
+                        <Image Source="/OpenCVWithWPFBackEnd;component/Images/save.png" Style="{StaticResource MenuIconStyle}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Command="local:Commands.LoadFamiliar">
+                    <MenuItem.Icon>
+                        <Image Source="/OpenCVWithWPFBackEnd;component/Images/load.png" Style="{StaticResource MenuIconStyle}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Show mode">
+                    <MenuItem.Icon>
+                        <Image Source="/OpenCVWithWPFBackEnd;component/Images/mode.png" Style="{StaticResource MenuIconStyle}"/>
+                    </MenuItem.Icon>
+                    <MenuItem Header="Source" Command="local:Commands.SetShowMode" CommandParameter="{x:Static local:ShowMode.Source}"/>
+                    <MenuItem Header="Preprocessed" Command="local:Commands.SetShowMode" CommandParameter="{x:Static local:ShowMode.Preprocessed}"/>
+                    <Separator />
+                    <MenuItem IsCheckable="True" Header="Show match angle" IsChecked="{Binding Path=ShowAngle}"/>
+                    <MenuItem IsCheckable="True" Header="Show contours" IsChecked="{Binding Path=ShowContours}"/>
+                    <MenuItem IsCheckable="True" Header="Show bounding rectangles" IsChecked="{Binding Path=ShowBounding}"/>
+                    <MenuItem IsCheckable="True" Header="Show accuracy" IsChecked="{Binding Path=ShowAccuracy}"/>
+                </MenuItem>
+                <Separator />
+                <MenuItem Command="Close" Header="Quit">
+                    <MenuItem.Icon>
+                        <Image Source="/OpenCVWithWPFBackEnd;component/Images/quit.png" Style="{StaticResource MenuIconStyle}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Margin="5">
+                <Border Width="648" Height="488" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="LightGray" CornerRadius="0" BorderThickness="4">
+                    <Grid Background="White">                        
+                        <Grid.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Command="local:Commands.OpenDevice">
+                                    <MenuItem.Icon>
+                                        <Image Source="/OpenCVWithWPFBackEnd;component/Images/webcam.png" Style="{StaticResource MenuIconStyle}"/>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Command="local:Commands.OpenPicture">
+                                    <MenuItem.Icon>
+                                        <Image Source="/OpenCVWithWPFBackEnd;component/Images/image.png" Style="{StaticResource MenuIconStyle}"/>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </ContextMenu>
+                        </Grid.ContextMenu>
+                        <Grid IsHitTestVisible="False">
+                            <Grid.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="FontSize" Value="56"/>
+                                    <Setter Property="FontFamily" Value="Tahoma"/>
+                                    <Setter Property="Foreground" Value="#30000000"/>
+                                </Style>
+                            </Grid.Resources>
+                            <TextBlock Text="Choose" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0" />
+                            <Image Source="/OpenCVWithWPFBackEnd;component/Images/big-camera.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="100" />
+                            <TextBlock Text="data source" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,100" />
+                        </Grid>
+                        <Image Name="ImagePresenter" Stretch="None" />
+                    </Grid>
+                </Border>
+            </Grid>
+            <GroupBox Margin="3" Grid.Column="1" Header="Settings"  DataContext="{Binding ElementName=RootWindow}">
+                <StackPanel>
+                    <TextBlock Text="{Binding StringFormat=Target contours length (\{0\}), Path=TargetLength}" HorizontalAlignment="Center"/>
+                    <Slider IsSnapToTickEnabled="True" TickFrequency="1" Minimum="5" Maximum="50" TickPlacement="TopLeft" Value="{Binding Path=TargetLength}" />
+                    <TextBlock Text="{Binding StringFormat=Threshold window size (\{0\}px), Path=WindowSize}" HorizontalAlignment="Center"/>
+                    <Slider IsSnapToTickEnabled="True" TickFrequency="2" Minimum="3" Maximum="53" TickPlacement="TopLeft" Value="{Binding Path=WindowSize}" />
+                    <TextBlock Text="{Binding StringFormat=Threshold substraction constant (\{0:F2\}), Path=ThresholdSubstractionConstant}" HorizontalAlignment="Center"/>
+                    <Slider TickFrequency="1" Minimum="0" Maximum="50" TickPlacement="Both" Value="{Binding Path=ThresholdSubstractionConstant}" />
+                    <CheckBox Content="Blur image" IsChecked="{Binding Path=UseBlur}"/>
+                    <GroupBox Header="Filtration">
+                        <StackPanel>
+                            <TextBlock Text="{Binding StringFormat=Minimal area (\{0:F2\}px²), Path=MinArea}" HorizontalAlignment="Center"/>
+                            <Slider Minimum="5" Maximum="400" Value="{Binding Path=MinArea}" />
+                        </StackPanel>
+                    </GroupBox>
+                    <TextBlock Text="{Binding StringFormat=Minimal NSP (\{0:F2\}), Path=MinNSP}" HorizontalAlignment="Center"/>
+                    <Slider Minimum="0" Maximum="1" TickFrequency="0.05" TickPlacement="Both" Value="{Binding Path=MinNSP}"/>
+                    <TextBlock Text="{Binding StringFormat=Minimal ACF NSP (\{0:F2\}), Path=MinACF_NSP}" HorizontalAlignment="Center"/>
+                    <Slider Minimum="0" Maximum="1" TickFrequency="0.05" TickPlacement="Both" Value="{Binding Path=MinACF_NSP}"/>
+                    <CheckBox Content="Retrive only external contours" IsChecked="{Binding Path=RetriveOnlyExternalContours}"/>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <StatusBar Grid.Row="2">            
+            <StatusBarItem>
+                <TextBlock Name="StatTextBlock"/>                
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem>
+                <TextBlock Name="FPSTextBlock"/>
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem>
+                <TextBlock Name="LoadedContourCollectionInfo"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

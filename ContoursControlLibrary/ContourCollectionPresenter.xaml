@@ -1,0 +1,53 @@
+﻿<UserControl xmlns:my="clr-namespace:ContoursControlLibrary"  x:Class="ContoursControlLibrary.ContourCollectionPresenter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" d:DesignHeight="234" d:DesignWidth="337"
+             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+             x:Name="Control">
+    <UserControl.CommandBindings>
+        <CommandBinding Command="my:Commands.DeleteSelectedContours" Executed="DeleteSelectedContours_Executed"/>
+    </UserControl.CommandBindings>    
+    <UserControl.Resources>
+        <x:Array Type="{x:Type sys:Object}" x:Key="AdditionalContextMenu">
+            <Separator/>
+            <MenuItem Command="my:Commands.DeleteSelectedContours" />
+        </x:Array>
+        <DataTemplate x:Key="ContourItemTemplate">            
+            <Grid Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Panel, AncestorLevel=1}, Path=ActualWidth}">
+                <my:ContourInfoPresenterControl
+                    Margin="1"
+                    Height="{Binding ElementName=Control, Path=ItemHeight}"
+                    ContourInfo="{Binding}"
+                    TextBlock.FontSize="9"
+                    ContextMenuExtension="{StaticResource ResourceKey=AdditionalContextMenu}"
+                    ShowReverse="False"/>
+            </Grid>
+        </DataTemplate>        
+    </UserControl.Resources>
+    <Grid>
+        <ListBox Name="ContoursBox"
+                 ItemsSource="{Binding ElementName=Control, Path=Contours}"
+                 ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+                 ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                 ItemTemplate="{StaticResource ContourItemTemplate}" 
+                 SelectionMode="Extended">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Padding" Value="0"/>
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="SkyBlue"/>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="LightGray"/>
+                    </Style.Resources>
+                </Style>
+            </ListBox.ItemContainerStyle>            
+        </ListBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="5d1ad171-b181-4147-b713-72f56b41bdca" name="Main" linkedPackageId="11179025-1a87-46ec-b7d4-568345d42d8c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="463a1eb8-273b-46d7-bb1e-59ec44b1b948" name="Main" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="40065bc9-021c-454b-b6b4-1045015437d0" />
+        <nodes>
+          <initialNode Id="907d1145-8d2b-47f2-b6a8-7dc380a9377c" name="Initial1" isLeaf="false">
+            <elementDefinition Id="5c8831ed-7c11-4194-8d70-e756ea663f41" />
+            <flowNodeTargets>
+              <controlFlow Id="c6b51f4b-86a2-4861-b734-fcb8efb21694" isLeaf="false">
+                <forkNodeMoniker Id="9540012c-dd99-49ee-be08-282f71a0b6b4" LastKnownName="Fork1" />
+                <elementDefinition Id="b086e6d6-a8d8-4459-a39b-479c9d4d57f4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="ea8f1dba-843e-4a17-8154-eab7f1b3364e" name="Получить кадр из источника" isLeaf="false">
+            <elementDefinition Id="7273c52d-5eab-4338-b53e-617410b5b3b3" />
+            <flowNodeTargets>
+              <controlFlow Id="cdb58f01-a00b-402f-8b22-8fa1fc2df95b" isLeaf="false">
+                <opaqueActionMoniker Id="02182229-e20b-4868-8c69-7b0d74798031" LastKnownName="Обработка кадра" />
+                <elementDefinition Id="52bbc892-02ea-49ee-83d1-5b6e14c2b099" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="23aed9c5-0bd6-4b49-b25a-a092cf4f7dd8" name="Предобратока кадра" isLeaf="false">
+            <elementDefinition Id="d58d8cb0-0aa5-4aaa-a427-82380b938d6b" />
+            <flowNodeTargets>
+              <controlFlow Id="b8661bb0-53ee-4e80-ac19-67338d5be7ee" isLeaf="false">
+                <opaqueActionMoniker Id="74621159-c006-4d2b-abf3-113fb075bc59" LastKnownName="Нахождение контуров" />
+                <elementDefinition Id="6dc9f484-f9ff-4775-822e-54e9066b8431" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="74621159-c006-4d2b-abf3-113fb075bc59" name="Нахождение контуров" isLeaf="false">
+            <elementDefinition Id="6ed8e926-6aac-459a-bb43-b28c2dfc50f6" />
+            <flowNodeTargets>
+              <controlFlow Id="95f86598-5f90-48e9-866c-8d4e1f85f520" isLeaf="false">
+                <decisionNodeMoniker Id="28e3abcb-2857-40a3-8473-936a271543df" LastKnownName="Decision1" />
+                <elementDefinition Id="16318028-3451-4d06-a972-72dc393bba2c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="384d353a-b901-459e-9bad-69d87fd13961" name="Фильтрация контуров" isLeaf="false">
+            <elementDefinition Id="d264bf66-5113-4f8b-a88b-6cf084e633b9" />
+            <flowNodeTargets>
+              <controlFlow Id="d16efb3c-d6b7-4199-ab3f-99037b2749a6" isLeaf="false">
+                <decisionNodeMoniker Id="091d3ba5-f4df-4625-a114-31994751153f" LastKnownName="Decision3" />
+                <elementDefinition Id="e8ddd83c-98f5-4f4c-baf7-6041bc0db695" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="eaee7bf4-2c4c-40c7-872f-da34f2ffa955" name="Нахождение соответствий" isLeaf="false">
+            <elementDefinition Id="a85d112f-b37c-4858-9452-0e5eab87fc20" />
+            <flowNodeTargets>
+              <controlFlow Id="f54ecc62-9d76-42f9-9f56-21662f26cdf7" isLeaf="false">
+                <opaqueActionMoniker Id="229b438c-ef4d-4ce5-8e2f-7223e2f2e372" LastKnownName="Отображение найденых соответствий" />
+                <elementDefinition Id="63cba764-3585-4fc6-b309-c7ccc72f21e5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="dea085df-abe6-4bb7-b212-51ac50a4d2c5" name="Оторбажение контуров" isLeaf="false">
+            <elementDefinition Id="aae49b88-1131-4a68-ad68-dfb436e54c2b" />
+            <flowNodeTargets>
+              <controlFlow Id="e7912e23-bca7-4ac0-8f10-59a047309427" isLeaf="false">
+                <mergeNodeMoniker Id="7910ca7c-b105-4305-9bee-883beb9f0b33" LastKnownName="Merge1" />
+                <elementDefinition Id="9d6f1a3d-ccc9-4a46-b758-493c033b014f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="28e3abcb-2857-40a3-8473-936a271543df" name="Decision1" isLeaf="false">
+            <elementDefinition Id="d885dab2-2daf-4611-b83b-da73f2996e0d" />
+            <flowNodeTargets>
+              <controlFlow Id="8611052a-e9c3-4d6f-bcf3-a8c0981188dc" guard="Включено отображение контуров" isLeaf="false">
+                <opaqueActionMoniker Id="dea085df-abe6-4bb7-b212-51ac50a4d2c5" LastKnownName="Оторбажение контуров" />
+                <elementDefinition Id="7b3d0223-94a0-4f9f-82d1-f3906a5e6a5b" />
+              </controlFlow>
+              <controlFlow Id="9f8e84f9-db9a-4f6b-88e8-1523114bebf7" isLeaf="false">
+                <mergeNodeMoniker Id="7910ca7c-b105-4305-9bee-883beb9f0b33" LastKnownName="Merge1" />
+                <elementDefinition Id="be15c8a6-ff91-4b36-8aed-def5e103bb50" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode Id="7910ca7c-b105-4305-9bee-883beb9f0b33" name="Merge1" isLeaf="false">
+            <elementDefinition Id="17e1ff31-8121-4e66-bee9-305dae69dbc3" />
+            <flowNodeTargets>
+              <controlFlow Id="c7cfea39-377e-4a02-ab40-075bf1723cba" isLeaf="false">
+                <opaqueActionMoniker Id="384d353a-b901-459e-9bad-69d87fd13961" LastKnownName="Фильтрация контуров" />
+                <elementDefinition Id="87ec944b-2607-4d58-b5c2-9afdf2cff8fe" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction Id="229b438c-ef4d-4ce5-8e2f-7223e2f2e372" name="Отображение найденых соответствий" isLeaf="false">
+            <elementDefinition Id="5087fe89-dfac-4e75-a088-dc026fd78266" />
+            <flowNodeTargets>
+              <controlFlow Id="2f66c834-7932-4732-b661-613d6827af56" isLeaf="false">
+                <mergeNodeMoniker Id="adcdf84b-3596-4641-b1bf-d0f3f829f4b7" LastKnownName="Merge5" />
+                <elementDefinition Id="ff57d5cf-6b37-440c-bcbc-543eaf62e516" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="9540012c-dd99-49ee-be08-282f71a0b6b4" name="Fork1" isLeaf="false">
+            <elementDefinition Id="59ffdd38-506e-4c84-b52a-041d4698c1a1" />
+            <flowNodeTargets>
+              <controlFlow Id="dc1f1482-6c19-4e97-8d7c-90d39e7d588f" isLeaf="false">
+                <opaqueActionMoniker Id="c32cf5e8-c668-4718-871a-fdc123f1c398" LastKnownName="Обработка пользовательского взаимодействия (GUI thread)" />
+                <elementDefinition Id="5f101182-4f1b-4c9c-a4f9-012c1f309b89" />
+              </controlFlow>
+              <controlFlow Id="ee917ec6-03f7-441f-8d3b-e813a1d58612" isLeaf="false">
+                <opaqueActionMoniker Id="32dcf61a-87eb-44dd-8e6c-8b41d0ee5013" LastKnownName="Основной поток действий (worker thread)" />
+                <elementDefinition Id="20dfdbf4-a7eb-4d10-902a-85fb4e4797c2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <decisionNode Id="8e7ae5fd-ac85-4649-ace8-bbebc8d0b309" name="Decision2" isLeaf="false">
+            <elementDefinition Id="bbff5274-1dca-444c-925e-22c87e330ab7" />
+            <flowNodeTargets>
+              <controlFlow Id="1c93b1fa-c783-4d6d-88cb-79857e43ae73" guard="Источник задан" isLeaf="false">
+                <opaqueActionMoniker Id="ea8f1dba-843e-4a17-8154-eab7f1b3364e" LastKnownName="Получить кадр из источника" />
+                <elementDefinition Id="80110e30-6ec8-4fbb-a35d-d472b4424ee5" />
+              </controlFlow>
+              <controlFlow Id="7c67e315-12d0-4042-a439-243172d58e10" guard="иначе" isLeaf="false">
+                <mergeNodeMoniker Id="6ee77d6e-c043-4b95-ad82-3064e03ba937" LastKnownName="Merge2" />
+                <elementDefinition Id="9950f7ba-0706-419f-985a-fe6a442e5c41" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="ae526962-d584-4c26-840b-bdefe8c53795" name="Ожидание" isLeaf="false">
+            <elementDefinition Id="571ce6fc-4c5f-4db6-8a11-eb22de90696d" />
+            <flowNodeTargets>
+              <controlFlow Id="da7090e0-08c2-4111-a614-cdbda5d2d0b7" isLeaf="false">
+                <mergeNodeMoniker Id="43af8dcb-d73f-4fc8-bb59-98cb346036e5" LastKnownName="Merge3" />
+                <elementDefinition Id="6fe033f4-131b-45a0-b1ac-6ca731d9446e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="6ee77d6e-c043-4b95-ad82-3064e03ba937" name="Merge2" isLeaf="false">
+            <elementDefinition Id="27664110-763a-41ea-8b79-4de5d5e7e500" />
+            <flowNodeTargets>
+              <controlFlow Id="578fd384-9f46-4d27-888f-e46fc6b66ccc" isLeaf="false">
+                <opaqueActionMoniker Id="ae526962-d584-4c26-840b-bdefe8c53795" LastKnownName="Ожидание" />
+                <elementDefinition Id="b144b4fa-96bf-48b0-9a5b-8a7be75027b8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction Id="02182229-e20b-4868-8c69-7b0d74798031" name="Обработка кадра" isLeaf="false">
+            <elementDefinition Id="13465e77-a525-44c8-b358-2c3e41da4098" />
+            <flowNodeTargets>
+              <controlFlow Id="c0e42f8b-66f7-4c9f-8b6c-2d2c3a406f3d" isLeaf="false">
+                <opaqueActionMoniker Id="23aed9c5-0bd6-4b49-b25a-a092cf4f7dd8" LastKnownName="Предобратока кадра" />
+                <elementDefinition Id="a6f1c5ee-5f60-403a-90f4-58a0a08e7835" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="43af8dcb-d73f-4fc8-bb59-98cb346036e5" name="Merge3" isLeaf="false">
+            <elementDefinition Id="dbed151f-b7e8-4ebf-95d1-d4e149aec4f8" />
+            <flowNodeTargets>
+              <controlFlow Id="ce01b48c-9b93-4fc9-b7f6-17d54aeed9cc" isLeaf="false">
+                <mergeNodeMoniker Id="a20611a7-4021-4a08-a5a5-5c0d92302358" LastKnownName="Merge4" />
+                <elementDefinition Id="09c4d16b-4901-47f2-a8aa-c509fa573022" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <mergeNode Id="a20611a7-4021-4a08-a5a5-5c0d92302358" name="Merge4" isLeaf="false">
+            <elementDefinition Id="536abb18-7947-4dd8-8a30-3c97d523d2ad" />
+            <flowNodeTargets>
+              <controlFlow Id="fc4f8784-917a-43ec-8276-9de6c3063df2" isLeaf="false">
+                <decisionNodeMoniker Id="8e7ae5fd-ac85-4649-ace8-bbebc8d0b309" LastKnownName="Decision2" />
+                <elementDefinition Id="ac479653-828d-40c9-8828-5baf9fe3c063" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode Id="091d3ba5-f4df-4625-a114-31994751153f" name="Decision3" isLeaf="false">
+            <elementDefinition Id="68451435-f78c-41c5-acfe-ed57a032b02b" />
+            <flowNodeTargets>
+              <controlFlow Id="243d3e81-eb68-4ad7-8a74-2ea8e824e26b" guard="Известные контуры загружены" isLeaf="false">
+                <opaqueActionMoniker Id="eaee7bf4-2c4c-40c7-872f-da34f2ffa955" LastKnownName="Нахождение соответствий" />
+                <elementDefinition Id="2cb712fa-a816-4269-b8ac-21e9836f87df" />
+              </controlFlow>
+              <controlFlow Id="46a5d67a-fe22-4813-a77b-6780415ce7de" isLeaf="false">
+                <mergeNodeMoniker Id="adcdf84b-3596-4641-b1bf-d0f3f829f4b7" LastKnownName="Merge5" />
+                <elementDefinition Id="57dc1be8-eb5a-4117-9713-73ae02b0eaa2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode Id="adcdf84b-3596-4641-b1bf-d0f3f829f4b7" name="Merge5" isLeaf="false">
+            <elementDefinition Id="458e52f5-9289-4954-8161-803a07d41179" />
+            <flowNodeTargets>
+              <controlFlow Id="6146f572-6ff0-4b6c-b5cb-0953e8f3f5fc" isLeaf="false">
+                <mergeNodeMoniker Id="43af8dcb-d73f-4fc8-bb59-98cb346036e5" LastKnownName="Merge3" />
+                <elementDefinition Id="62be59ad-e424-4180-b988-9a2e1faa7288" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction Id="c32cf5e8-c668-4718-871a-fdc123f1c398" name="Обработка пользовательского взаимодействия (GUI thread)" isLeaf="false">
+            <elementDefinition Id="4718618a-5fee-4183-aaef-0a6c3401f5ca" />
+            <flowNodeTargets>
+              <controlFlow Id="fb458119-b474-42c3-9986-bdf7d2daf336" isLeaf="false">
+                <acceptEventActionMoniker Id="55913184-a72f-437c-bc5e-a4579e255269" LastKnownName="Ожидать события закрытия приложения" />
+                <elementDefinition Id="a2f85a87-0cde-4f09-b9cb-ccbd72aea26e" />
+              </controlFlow>
+              <controlFlow Id="fc84152f-2b70-4bfe-a699-67f5f551f9cd" isLeaf="false">
+                <acceptEventActionMoniker Id="6ee68965-e9bc-494d-9c68-3b9654147a4f" LastKnownName="Ожидать выбора источника данных" />
+                <elementDefinition Id="a2d07da0-0cc3-4597-9687-2fe51478107a" />
+              </controlFlow>
+              <controlFlow Id="748a8e1a-13f5-4863-b2f4-bf85dc06155d" isLeaf="false">
+                <acceptEventActionMoniker Id="dbdbc91c-797e-4f91-8450-3c33cdf53e95" LastKnownName="Ожидать загрузки известных контуров" />
+                <elementDefinition Id="637d5ac4-67b5-497c-848d-3ddd4024ae78" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="32dcf61a-87eb-44dd-8e6c-8b41d0ee5013" name="Основной поток действий (worker thread)" isLeaf="false">
+            <elementDefinition Id="7ff011fc-8444-43a1-9369-67a0b157afd8" />
+            <flowNodeTargets>
+              <controlFlow Id="cff89cb7-4b6d-4159-b4ff-207f51a67504" isLeaf="false">
+                <mergeNodeMoniker Id="a20611a7-4021-4a08-a5a5-5c0d92302358" LastKnownName="Merge4" />
+                <elementDefinition Id="f737ce08-d5b9-468e-9a63-c62ca9775537" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d1437318-7406-4185-bb0e-39d9335afccc" name="Закрыть приложение" isLeaf="false">
+            <elementDefinition Id="33f18192-45f5-4845-b10f-7391623216c3" />
+          </opaqueAction>
+          <acceptEventAction Id="55913184-a72f-437c-bc5e-a4579e255269" name="Ожидать события закрытия приложения" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="89f1344d-f1a3-4500-849c-4c4904a70671" />
+            <flowNodeTargets>
+              <controlFlow Id="dc713c35-1be8-4771-be43-7d604430f25e" isLeaf="false">
+                <opaqueActionMoniker Id="3da353a0-5719-447c-8662-7e13bcf275b1" LastKnownName="Завершить основной поток (worker thread)" />
+                <elementDefinition Id="2cb5ca78-d947-4ab7-9313-43b958f8785d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <acceptEventAction Id="6ee68965-e9bc-494d-9c68-3b9654147a4f" name="Ожидать выбора источника данных" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="9a1766b2-444a-4e9e-90ca-8eaa0bc619d7" />
+            <flowNodeTargets>
+              <controlFlow Id="c7ac9289-7d65-46d6-998b-b5c1f6052e39" isLeaf="false">
+                <opaqueActionMoniker Id="76a1df29-1d4b-405a-bdbc-b1e213dce0f7" LastKnownName="Задать источник данных" />
+                <elementDefinition Id="7c0c68d1-cdb0-4321-91c3-fb518544b59c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <acceptEventAction Id="dbdbc91c-797e-4f91-8450-3c33cdf53e95" name="Ожидать загрузки известных контуров" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="192370d1-79bc-4b40-a172-f3315bac4ebe" />
+            <flowNodeTargets>
+              <controlFlow Id="147b8500-d386-4199-a31f-a727d336e7cb" isLeaf="false">
+                <opaqueActionMoniker Id="9e4e06d4-6671-47d1-9c75-ec3ba5831726" LastKnownName="Задать известные контура" />
+                <elementDefinition Id="d22571f9-d1d5-475c-bdb0-b4504e82093e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <opaqueAction Id="76a1df29-1d4b-405a-bdbc-b1e213dce0f7" name="Задать источник данных" isLeaf="false">
+            <elementDefinition Id="a9a5a60c-ce98-408e-a3e2-8cefb28b5ca9" />
+            <flowNodeTargets>
+              <controlFlow Id="0e49e8bc-ad85-4c60-8862-c17aa6c19f86" isLeaf="false">
+                <mergeNodeMoniker Id="de14a88b-3a45-4ce4-94b7-306acb769841" LastKnownName="Merge6" />
+                <elementDefinition Id="2af5dba6-fcd4-4fcc-a1b0-0e1f3f1e76da" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="9e4e06d4-6671-47d1-9c75-ec3ba5831726" name="Задать известные контура" isLeaf="false">
+            <elementDefinition Id="a1efcb6e-fda4-43c5-8263-23cdf8737996" />
+            <flowNodeTargets>
+              <controlFlow Id="fb4d2b65-6ebc-4220-a749-ccc772c7d746" isLeaf="false">
+                <mergeNodeMoniker Id="de14a88b-3a45-4ce4-94b7-306acb769841" LastKnownName="Merge6" />
+                <elementDefinition Id="8f18b5d7-2aa0-4d80-ba63-7621511e4558" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="de14a88b-3a45-4ce4-94b7-306acb769841" name="Merge6" isLeaf="false">
+            <elementDefinition Id="e1547f51-acd7-4bd4-a3ad-f5dfe9c98115" />
+            <flowNodeTargets>
+              <controlFlow Id="e7a7a737-27c2-43d7-b235-f237b99be41e" isLeaf="false">
+                <opaqueActionMoniker Id="c32cf5e8-c668-4718-871a-fdc123f1c398" LastKnownName="Обработка пользовательского взаимодействия (GUI thread)" />
+                <elementDefinition Id="5469eecb-5b6b-4bbf-9bb3-e2eb920661c4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction Id="3da353a0-5719-447c-8662-7e13bcf275b1" name="Завершить основной поток (worker thread)" isLeaf="false">
+            <elementDefinition Id="d0d97d4e-0414-46b9-8427-ffad3a7c07da" />
+            <flowNodeTargets>
+              <controlFlow Id="3e226c32-4a71-48e6-89bc-bd54ce9ef6f8" isLeaf="false">
+                <opaqueActionMoniker Id="d1437318-7406-4185-bb0e-39d9335afccc" LastKnownName="Закрыть приложение" />
+                <elementDefinition Id="57a57e7d-1615-4be9-8674-c3cd06242107" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="11179025-1a87-46ec-b7d4-568345d42d8c" name="ModelingProject">
+    <elementDefinition Id="8288e9ca-db34-4f48-9d31-5032b82ec352" />
+    <profileInstances>
+      <packageHasProfileInstances Id="ca074880-0d70-42b3-ab53-612c324a4663">
+        <profileInstance Id="3ae0de90-770d-45b1-af20-a88ed3a46806" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="cc09139c-3d98-4336-8c61-149599fcb8e1">
+        <profileInstance Id="fde035e3-5b7b-4865-834a-70ce67ff43a6" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

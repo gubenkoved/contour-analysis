@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="3a7b8af1-0ed8-4535-a179-83ee80ecba8a" name="UMLUseCaseDiagram1" linkedPackageId="f385b723-343c-47fc-b9d0-e768c12b1036" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="7ba8f035-6fd3-4100-9907-3d5ce52a5b3e" name="Обобщённый пользователь" isAbstract="true" isLeaf="false">
+        <elementDefinition Id="9bba6689-db2a-4a70-833b-32a4253c6972" />
+        <targetEnds>
+          <association Id="de27245e-54ea-461d-a2a0-0bea663db0f3" isDerived="false" sourceEndRoleName="Обобщённый пользователь" targetEndRoleName="Загрузить банк контуров" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="63f80f47-6ccb-43e4-a99e-7ca0c3748567" LastKnownName="Загрузить банк контуров" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1674763b-9515-402c-9054-3e120e85a7f8" name="Обобщённый пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9d852a87-d3fe-4647-9f76-e7de7114185d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81c788e0-1657-4f30-aab2-befd5e95470a" name="Загрузить банк контуров" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c1077b5a-35d9-42b6-9544-7e298b554abc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7d2eee70-d4cd-457e-8dc4-ff3e4a35fd38" />
+          </association>
+          <association Id="39db8a09-172f-48ac-9c5f-66c8bb2d08ad" isDerived="false" sourceEndRoleName="Обобщённый пользователь" targetEndRoleName="Выбор источника изображений" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1cebefad-e1bd-4431-8773-15cf3962594a" LastKnownName="Выбор источника изображений" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d766025-6d55-4f43-aaf8-3991d6b8999e" name="Обобщённый пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="db7765de-fd24-43a2-b6d7-bd585d017158" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="881cf255-3508-4e75-9bfc-2d0a854d3953" name="Выбор источника изображений" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ea208801-01ee-4653-8dfd-03a2fd98bacd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2a5a3413-1c10-4a86-9314-2160f191f513" />
+          </association>
+          <association Id="925de41a-cc40-4ca5-a264-3302a009a65a" isDerived="false" sourceEndRoleName="Обобщённый пользователь" targetEndRoleName="Нахождение и распознавание" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="34406e6c-aaae-4b2f-98bf-456db356bb09" LastKnownName="Запуск процесса распознавания" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5351113d-c4b9-4c67-9a3d-74c6d58d3057" name="Обобщённый пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d1aebaf1-3a36-4357-9633-80ea9de3c9b0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="66450879-e25c-4cad-8c44-b319e9022f81" name="Нахождение и распознавание" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c5b153ee-8fbc-44d4-ac9d-4abff80d63dd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d9e6a659-8a2d-46bc-9955-ecf04decdcd5" />
+          </association>
+          <association Id="f9bb2f83-83a8-40e8-a671-013068b7469f" isDerived="false" sourceEndRoleName="Обобщённый пользователь" targetEndRoleName="Создать банк из конутров, найденных в источнике" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="11fa5c41-9f3d-4583-bcb7-841347a6552f" LastKnownName="Создать коллекцию конутров, найденных в источнике" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3be11727-d644-46d5-bc13-0c038efa623e" name="Обобщённый пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f92a5947-b354-4494-a3c1-acf93ba5324b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="452e837a-87bd-4089-9496-574574544d79" name="Создать банк из конутров, найденных в источнике" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6cd3f1ba-6317-4dcc-94a9-dd65b7570270" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="87f9e7c3-d7f5-44c7-88dc-1e7d23caecfa" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="73134d02-b2c3-4a47-85ec-89494231fae9" name="Создать банк контуров" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="64271a0e-6faa-4351-9039-9b810590c0b6" />
+        <subjects>
+          <subsystemMoniker Id="73fda444-02a5-46f7-a957-e0207428456b" LastKnownName="Редактор контуров" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="41296f9a-8f9f-48dd-8322-9d2bf93f2bea" name="Редактор банка контуров" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="106f6419-c962-447b-b2f7-bed8056be8fa" />
+        <generalsInternal>
+          <generalization Id="02cee28e-cdb8-43c8-97f1-c8e758cdad82" isSubstitutable="false">
+            <actorMoniker Id="7ba8f035-6fd3-4100-9907-3d5ce52a5b3e" LastKnownName="Обобщённый пользователь" />
+            <elementDefinition Id="0b94da78-b1d8-493a-b77a-958e8d6e9bdd" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="bbc9d68e-42c7-4696-82f4-480d9e4c2ab1" isDerived="false" sourceEndRoleName="Редактор банка контуров" targetEndRoleName="Создать банк контуров" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="73134d02-b2c3-4a47-85ec-89494231fae9" LastKnownName="Создать банк контуров" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="316cf571-e8fd-401e-a3fa-67d465c74ed2" name="Редактор банка контуров" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="066f7ea6-8fbe-454b-9b33-9a33113c476b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4ef31c32-ab33-47eb-8a29-98599a922826" name="Создать банк контуров" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="4c3feff9-1d06-4fe0-835e-06a5e28aac4f" name="Lower" value="1">
+                      <elementDefinition Id="b85de163-4e95-495b-8643-37417eaae4e2" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="85878242-49bb-4840-9501-84360a25cecf" name="Upper" value="1">
+                      <elementDefinition Id="2ac74cde-b454-43dc-a155-df8e85f69b34" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="23025891-ab76-4916-a822-9a4779089255" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f5ddb51c-ff97-4940-a73c-34b05ad00946" />
+          </association>
+          <association Id="6e38f587-6b76-4e2c-9f3f-2f94b75a0f6d" isDerived="false" sourceEndRoleName="Редактор банка контуров" targetEndRoleName="Заполнить банк" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9cc24566-d968-40e1-b2d1-95eec8412c0d" LastKnownName="Заполнить банк" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2232caee-c9b1-4af9-ac42-b852d94f47ef" name="Редактор банка контуров" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8298e510-2f37-40b4-8095-7d9fdedaa2bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="91ee2e21-d5f3-4501-b0e7-8a21313e23a5" name="Заполнить банк" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6e7193be-3928-4974-beaf-6969436e696e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e5fcba94-aeac-46b0-9794-2831ce909c18" />
+          </association>
+          <association Id="e9506b4e-21fd-44ff-a809-0931249805eb" isDerived="false" sourceEndRoleName="Редактор банка контуров" targetEndRoleName="Сохранить банк" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="82575b1d-3357-48ae-8428-3284cd65fa89" LastKnownName="Сохранить банк" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1bbc65b5-d5b8-47a0-ad0b-c17df72a6e40" name="Редактор банка контуров" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="090115eb-1107-4528-aa2f-0cf89ac189a5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3857a4b0-69a3-416c-8c78-7cfef57a234d" name="Сохранить банк" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f776f18b-12b2-4695-9535-c12873a64eba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="869c4ec3-938c-49fd-85e0-2d86bbfca62f" />
+          </association>
+          <association Id="48ea4469-22c1-47a9-858e-b6dc7b4053ce" isDerived="false" sourceEndRoleName="Редактор банка контуров" targetEndRoleName="Просмотреть полную информацию о контуре" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="19c43b45-d32c-4626-aeab-b8b6f739377f" LastKnownName="Просмотреть полную информацию о контуре" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6cfb0c07-78c5-406c-80f0-e5aac30ae8cc" name="Редактор банка контуров" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1101500a-f1cd-4308-abf2-0d11b8d8d8f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a24d79a4-2ca1-4184-9be1-ecd5056b1ded" name="Просмотреть полную информацию о контуре" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="21e78e39-f93e-4827-8afd-b6f63e14ec46" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="521fefe5-ed30-43ae-8047-9e5c00e64c20" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="73fda444-02a5-46f7-a957-e0207428456b" name="Редактор контуров" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fb2e0367-f180-4c5c-991b-4d03a04cc03b" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="fef44a15-82af-48be-afe4-0b2730749411" name="Программа распознавания" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1c5aa64a-45ea-48f7-a552-1579acc99145" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="a4331cb9-8ead-4f88-a3e8-38a54a92da20" name="Получить изображение из заданного источника" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="69286deb-db93-4456-9dd8-a891193796b6" />
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="903063f9-0d9d-4b50-a25f-60285111723e" name="Предобработка изображения" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9bf3febb-b9b1-455a-987b-f0856a51c0ef" />
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c48cf25a-041b-4ad6-92cc-8941c45e6906" name="Выделение контуров" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5ceb266d-598b-4ebd-a08a-c65c78e96c16" />
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a78d107f-9ef1-4cc2-8936-5159ca64c7cc" name="Распознавание контуров" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5c7fc7a2-2feb-4c0e-8af0-90fb3dcc1dd0" />
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="82575b1d-3357-48ae-8428-3284cd65fa89" name="Сохранить банк" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6eb8c71e-9556-4d6b-baeb-ff084249d46b" />
+        <subjects>
+          <subsystemMoniker Id="73fda444-02a5-46f7-a957-e0207428456b" LastKnownName="Редактор контуров" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9cc24566-d968-40e1-b2d1-95eec8412c0d" name="Заполнить банк" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e255fb04-15ea-4f43-a88f-2a9ccf7679e7" />
+        <subjects>
+          <subsystemMoniker Id="73fda444-02a5-46f7-a957-e0207428456b" LastKnownName="Редактор контуров" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="604c146a-131c-458c-96d0-8d1c54a13e04" name="Добавить контур" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0c2574ce-d5a7-4b66-a30e-f8d12036ee2e" />
+        <extendedCases>
+          <extend Id="a97860d9-ec48-4812-9bbb-4910776bf5de">
+            <useCaseMoniker Id="9cc24566-d968-40e1-b2d1-95eec8412c0d" LastKnownName="Заполнить банк" />
+            <elementDefinition Id="f59f1b17-9920-4998-9e85-e5a7fe357029" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="73fda444-02a5-46f7-a957-e0207428456b" LastKnownName="Редактор контуров" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="4a992640-4aec-4599-9f06-23a048d7c999" name="Пользователь программы распознвания" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="69fb0b45-ab91-4014-b81b-643ef784535e" />
+        <generalsInternal>
+          <generalization Id="09ada2d1-3d4f-4c1b-812c-0f12e8b27654" isSubstitutable="false">
+            <actorMoniker Id="7ba8f035-6fd3-4100-9907-3d5ce52a5b3e" LastKnownName="Обобщённый пользователь" />
+            <elementDefinition Id="4e4d9f8a-a859-4832-8cb2-c6a8f5efb96d" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="63f80f47-6ccb-43e4-a99e-7ca0c3748567" name="Загрузить банк контуров" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a92efb83-012c-4917-a78d-24ccbf55477e" />
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1cebefad-e1bd-4431-8773-15cf3962594a" name="Выбор источника изображений" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="93a3c485-f178-4e41-8f13-5b665f7aa673" />
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="34406e6c-aaae-4b2f-98bf-456db356bb09" name="Запуск процесса распознавания" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8d7fe67f-09e1-4080-8f39-ad3a1229a1d9" />
+        <additions>
+          <include Id="0102af2a-e041-4f36-9c6d-11d445a28377">
+            <useCaseMoniker Id="a4331cb9-8ead-4f88-a3e8-38a54a92da20" LastKnownName="Получить изображение из заданного источника" />
+            <elementDefinition Id="21e637fd-91c0-4b73-8e98-fa7b2587c52b" />
+          </include>
+          <include Id="9269f70e-3fbd-4338-875c-8f5beb86ac7c">
+            <useCaseMoniker Id="903063f9-0d9d-4b50-a25f-60285111723e" LastKnownName="Предобработка изображения" />
+            <elementDefinition Id="c08bc768-6954-46a1-828c-0a9227eaa486" />
+          </include>
+          <include Id="6b61d922-6784-4fd2-90f0-3d49b2918970">
+            <useCaseMoniker Id="c48cf25a-041b-4ad6-92cc-8941c45e6906" LastKnownName="Выделение контуров" />
+            <elementDefinition Id="06742719-89b8-45ec-a2d9-edde58f90236" />
+          </include>
+          <include Id="fe6a5d13-21cf-4dbc-8deb-c94394545b9b">
+            <useCaseMoniker Id="a78d107f-9ef1-4cc2-8936-5159ca64c7cc" LastKnownName="Распознавание контуров" />
+            <elementDefinition Id="de8564fc-510f-4c0e-af82-6877949b0a3e" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="11fa5c41-9f3d-4583-bcb7-841347a6552f" name="Создать коллекцию конутров, найденных в источнике" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f5b08d03-b38f-426e-b730-86f8b2a65c9e" />
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c6539117-2916-4f2c-a274-421eee476e13" name="Удалить контур" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6b7cb192-6d36-4793-8de7-6ce844f2999d" />
+        <extendedCases>
+          <extend Id="5183b600-f12c-4f42-88ce-ac039dfff463">
+            <useCaseMoniker Id="9cc24566-d968-40e1-b2d1-95eec8412c0d" LastKnownName="Заполнить банк" />
+            <elementDefinition Id="9d4a348d-5947-45dc-a502-cc31a6f2ea0e" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="73fda444-02a5-46f7-a957-e0207428456b" LastKnownName="Редактор контуров" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="4b9f19af-c9b5-4f5f-9f52-7c866620d1bd" name="Создать контур" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aa7fb099-2f87-4dab-bf2c-072b6642a687" />
+        <extendedCases>
+          <extend Id="2dda1315-3521-4fa3-8773-93f89e4712d7">
+            <useCaseMoniker Id="9cc24566-d968-40e1-b2d1-95eec8412c0d" LastKnownName="Заполнить банк" />
+            <elementDefinition Id="1d757020-23a1-4de1-901d-1c32cfec2850" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="73fda444-02a5-46f7-a957-e0207428456b" LastKnownName="Редактор контуров" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e11c249c-2088-42b3-8680-5fcb68d1bcb7" name="Создать из существующего (загрузить)" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b8111498-b9b7-43ed-a7c0-22a65872c538" />
+        <extendedCases>
+          <extend Id="824232ca-58ae-447b-a02a-9ecbd7f5da23">
+            <useCaseMoniker Id="73134d02-b2c3-4a47-85ec-89494231fae9" LastKnownName="Создать банк контуров" />
+            <elementDefinition Id="d377252c-5240-41d4-bc0e-b25ba84a0562" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="73fda444-02a5-46f7-a957-e0207428456b" LastKnownName="Редактор контуров" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="5eced4fe-0479-46fd-af8a-147ea372ec23" name="Выбрать устройство видеозахвата в качестве источника" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5fbb0bac-395e-4d32-957f-93709c7efb57" />
+        <extendedCases>
+          <extend Id="cb81fea7-dd91-4c7e-a96c-18240894d8b2">
+            <useCaseMoniker Id="1cebefad-e1bd-4431-8773-15cf3962594a" LastKnownName="Выбор источника изображений" />
+            <elementDefinition Id="0154554d-3a3b-4a75-a831-9eeeb6081c10" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b3d93bec-f460-4a07-b9d2-87888ac2d336" name="Выбрать картинку в качестве источника" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6af0a747-37f6-4baa-b111-9023d5f35eb4" />
+        <extendedCases>
+          <extend Id="b5425b62-89e9-4865-8661-3b316808fd91">
+            <useCaseMoniker Id="1cebefad-e1bd-4431-8773-15cf3962594a" LastKnownName="Выбор источника изображений" />
+            <elementDefinition Id="06ba4d7d-7aa8-4152-893f-c6a691cf3819" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="fef44a15-82af-48be-afe4-0b2730749411" LastKnownName="Программа распознавания" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="19c43b45-d32c-4626-aeab-b8b6f739377f" name="Просмотреть полную информацию о контуре" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="96e7a9ef-8900-4bb8-8a4c-01e6c589ab54" />
+        <subjects>
+          <subsystemMoniker Id="73fda444-02a5-46f7-a957-e0207428456b" LastKnownName="Редактор контуров" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="ddc1cd5b-f46e-43ce-b1ad-598dcd1430f8" name="Задать имя контура" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6451586a-6470-4b9f-a02b-f69c43e1d878" />
+        <extendedCases>
+          <extend Id="82c3549f-0962-4d5d-83f3-b9ffe493d611">
+            <useCaseMoniker Id="19c43b45-d32c-4626-aeab-b8b6f739377f" LastKnownName="Просмотреть полную информацию о контуре" />
+            <elementDefinition Id="0a7ad32f-46df-4779-819e-06c1c5258d76" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="73fda444-02a5-46f7-a957-e0207428456b" LastKnownName="Редактор контуров" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="f385b723-343c-47fc-b9d0-e768c12b1036" name="ModelingProject">
+    <elementDefinition Id="8288e9ca-db34-4f48-9d31-5032b82ec352" />
+    <profileInstances>
+      <packageHasProfileInstances Id="319d6539-b3f6-4c82-88f0-81af1f53950b">
+        <profileInstance Id="6df3904b-aea0-4d46-943c-e50fe57b6a72" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c5dd7c03-0005-4940-8c28-4a743398b836">
+        <profileInstance Id="5d174743-7ebb-4a91-b98b-6caf07df7f66" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

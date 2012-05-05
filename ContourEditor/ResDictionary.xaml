@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="RawContourPolylineStyle">
+        <Setter Property="Polyline.StrokeThickness" Value="7.0" />
+        <Setter Property="Polyline.Stroke" Value="Black" />
+        <Setter Property="Polyline.StrokeLineJoin" Value="Round" />
+        <Setter Property="Polyline.StrokeStartLineCap" Value="Round" />
+        <Setter Property="Polyline.StrokeEndLineCap" Value="Round" />
+        <Setter Property="Control.Opacity" Value="0.25" />
+    </Style>
+    <Style x:Key="BoldContourPolylineStyle">
+        <Setter Property="Polyline.StrokeThickness" Value="1.5" />
+        <Setter Property="Polyline.Stroke" Value="Black" />
+        <Setter Property="Polyline.StrokeLineJoin" Value="Round" />        
+    </Style>
+    <Style x:Key="ExtraBoldContourPolylineStyle">
+        <Setter Property="Polyline.StrokeThickness" Value="2.0" />
+        <Setter Property="Polyline.Stroke" Value="Black" />
+        <Setter Property="Polyline.StrokeLineJoin" Value="Round" />
+    </Style>
+    <Style x:Key="SimplifiedContourPolylineStyle">
+        <Setter Property="Polyline.StrokeThickness" Value="1.5" />
+        <Setter Property="Polyline.Stroke" Value="Red" />
+        <Setter Property="Polyline.StrokeLineJoin" Value="Round" />
+        <Setter Property="Control.Opacity" Value="1.0" />
+    </Style>
+    <Style x:Key="BoldMarkerStyle">
+        <Setter Property="Ellipse.StrokeThickness" Value="1.0" />
+        <Setter Property="Ellipse.Stroke" Value="Black" />
+        <Setter Property="Ellipse.Fill" Value="Black" />
+        <Setter Property="Ellipse.Opacity" Value="1.0" />
+    </Style>
+    <Style x:Key="ExtraBoldMarkerStyle">
+        <Setter Property="Ellipse.StrokeThickness" Value="1.5" />
+        <Setter Property="Ellipse.Stroke" Value="Black" />
+        <Setter Property="Ellipse.Fill" Value="White" />
+        <Setter Property="Ellipse.Opacity" Value="1.0" />
+    </Style>
+    <Style x:Key="SimplifiedContourMarkerStyle">
+        <Setter Property="Ellipse.StrokeThickness" Value="1.5" />
+        <Setter Property="Ellipse.Stroke" Value="Red" />
+        <Setter Property="Ellipse.Fill" Value="White" />
+        
+        <Setter Property="Ellipse.Opacity" Value="1.0" />
+    </Style>
+</ResourceDictionary>
