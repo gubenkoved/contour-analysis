@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AForge.AdditionalFilters", "AForge.AdditionalFilters\AForge.AdditionalFilters.csproj", "{309F5A5A-EFB0-4F82-9A1A-3E7F63BBAB58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContourEditor", "ContourEditor\ContourEditor.csproj", "{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}"
@@ -38,11 +40,13 @@ Global
 		{309F5A5A-EFB0-4F82-9A1A-3E7F63BBAB58}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{309F5A5A-EFB0-4F82-9A1A-3E7F63BBAB58}.Release|x86.ActiveCfg = Release|Any CPU
 		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Debug|Any CPU.Build.0 = Debug|x86
 		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Debug|x86.ActiveCfg = Debug|x86
 		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Debug|x86.Build.0 = Debug|x86
 		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Release|Any CPU.ActiveCfg = Release|x86
+		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Release|Any CPU.Build.0 = Release|x86
 		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Release|Mixed Platforms.ActiveCfg = Release|x86
 		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Release|Mixed Platforms.Build.0 = Release|x86
 		{B80EDCFB-E38F-4368-ABA2-94E5E015A5DA}.Release|x86.ActiveCfg = Release|x86
@@ -78,21 +82,25 @@ Global
 		{CE0B603C-0E0C-4686-A1CD-6186A815C12A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{CE0B603C-0E0C-4686-A1CD-6186A815C12A}.Release|x86.ActiveCfg = Release|Any CPU
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Debug|Any CPU.Build.0 = Debug|x86
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Debug|x86.ActiveCfg = Debug|x86
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Debug|x86.Build.0 = Debug|x86
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Release|Any CPU.ActiveCfg = Release|x86
+		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Release|Any CPU.Build.0 = Release|x86
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Release|Mixed Platforms.ActiveCfg = Release|x86
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Release|Mixed Platforms.Build.0 = Release|x86
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Release|x86.ActiveCfg = Release|x86
 		{D522AC8A-D1FD-4A14-9F1F-C47883A65521}.Release|x86.Build.0 = Release|x86
 		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Debug|Any CPU.Build.0 = Debug|x86
 		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Debug|x86.ActiveCfg = Debug|x86
 		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Debug|x86.Build.0 = Debug|x86
 		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Release|Any CPU.ActiveCfg = Release|x86
+		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Release|Any CPU.Build.0 = Release|x86
 		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Release|Mixed Platforms.ActiveCfg = Release|x86
 		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Release|Mixed Platforms.Build.0 = Release|x86
 		{9A5DF376-ED20-44D8-93DA-4E90E68250D4}.Release|x86.ActiveCfg = Release|x86
