@@ -39,15 +39,17 @@
     <ApplicationIcon>Images\brain.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DirectShowLib-2005">
-      <HintPath>..\..\..\..\..\Downloads\DirectShowLibV2-1\lib\DirectShowLib-2005.dll</HintPath>
+    <Reference Include="DirectShowLib-2005, Version=2.1.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DirectShowLib-2005.dll</HintPath>
     </Reference>
-    <Reference Include="Emgu.CV">
-      <HintPath>..\..\..\..\..\..\..\emgucv-x86-2.3.0.1416\bin\Emgu.CV.dll</HintPath>
+    <Reference Include="Emgu.CV, Version=2.3.0.1416, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\EmguCV\Emgu.CV.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.Util, Version=2.3.0.1416, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\emgucv-x86-2.3.0.1416\bin\Emgu.Util.dll</HintPath>
+      <HintPath>..\bin\EmguCV\Emgu.Util.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -122,17 +124,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="opencv_core231.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="opencv_highgui231.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="opencv_imgproc231.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ContourAnalysis.Core\ContourAnalysis.Core.csproj">
       <Project>{7DFF1BBB-8D51-45C4-840F-7114B22143D5}</Project>
       <Name>ContourAnalysis.Core</Name>
@@ -155,6 +146,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\big-camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="opencv_core231.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="opencv_highgui231.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="opencv_imgproc231.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
